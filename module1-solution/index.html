@@ -17,6 +17,14 @@
       .message {
         font-size: 1.3em; font-weight: bold;
       }
+      .message.green{
+        color: green;}
+      .message.red{
+        color: red;}
+      input.green{
+        border-color: green;}
+      input.red{
+        border-color: red;}
     </style>
   </head>
   <body>
@@ -24,12 +32,12 @@
     <div ng-controller="LunchCheckController">
       <br>
       <div class="form-group">
-        <input id="lunch_menu" ng-model="lunch_menu"  type="text" placeholder="list comma separated dishes you usually have for lunch" class="form-control">
+        <input id="lunch_menu" ng-model="lunch_menu"  type="text" placeholder="list comma separated dishes you usually have for lunch" class="form-control {{color}}">
       </div>
       <div class="form-group">
         <button type="button" class="btn btn-default" ng-click="check()">Check If Too Much</button>
       </div>
-      <div class="form-group message">
+      <div class="form-group message {{color}}">
           {{message}}
       </div>
 
