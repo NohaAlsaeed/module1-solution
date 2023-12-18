@@ -7,6 +7,7 @@
 
   function LunchCheckController($scope){
     $scope.lunch_menu='';
+    $scope.color='';
 
 
     $scope.check= function (){
@@ -19,12 +20,15 @@
                 });
       if(noList >0 && noList <= 3){
         $scope.message ="Enjoy!";
+        $scope.color='green';
       }
       else if(noList>=4){
         $scope.message = "Too much!";
+        $scope.color='green';
       }
       else{
         $scope.message = "Please enter data first";
+        $scope.color='red';
       }
     }
   }
